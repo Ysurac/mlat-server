@@ -29,7 +29,7 @@ from mlat import constants
 #
 # Please remember that this needs to be _the code that the server is running_.
 #
-# AGPL_SERVER_CODE_URL = "https://github.com/Ysurac/mlat-server"
+AGPL_SERVER_CODE_URL = "https://github.com/Ysurac/mlat-server"
 
 # minimum NUCp value to accept as a sync message
 MIN_NUC = 6
@@ -48,6 +48,17 @@ MLAT_DELAY = 2.5
 
 # maxfev (maximum function evaluations) for the solver
 SOLVER_MAXFEV = 50
+
+# Define authentication method (only mysql supported for now), set "" to disable
+AUTH = ""
+#AUTH = "mysql"
+
+# Database configuration
+DB_NAME = ""
+DB_USER = ""
+DB_PASS = ""
+DB_HOST = "127.0.0.1"
+DB_PORT = 3306
 
 if 'AGPL_SERVER_CODE_URL' not in globals():
     raise RuntimeError('Please update AGPL_SERVER_CODE_URL in mlat/server/config.py')

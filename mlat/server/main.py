@@ -26,7 +26,7 @@ import signal
 import argparse
 
 from mlat.server import jsonclient, output, coordinator, leakcheck
-
+from mlat.server.auth import *
 
 def hostport(s):
     parts = s.split(':')
@@ -231,7 +231,8 @@ class MlatServer(object):
         self.coordinator = coordinator.Coordinator(work_dir=args.work_dir,
                                                    pseudorange_filename=args.dump_pseudorange,
                                                    partition=args.partition,
-                                                   tag=args.tag)
+                                                   tag=args.tag,
+                                                   authenticator=auth())
 
         subtasks = self.make_subtasks(args)
 
