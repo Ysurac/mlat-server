@@ -1,3 +1,7 @@
+Fork of mlat-server
+
+This fork only add authentication from a MySQL DB
+
 # mlat-server
 
 This is a Mode S multilateration server that is designed to operate with
